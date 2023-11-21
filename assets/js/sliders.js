@@ -550,9 +550,8 @@ let scapeSwiper = new Swiper(".scape__slider", {
 
 
 let buildTwoSwiper = new Swiper(".buildings__two", {
-    loop: true,
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
 });
@@ -578,18 +577,35 @@ let buildingsSwiper = new Swiper(".buildings__slider", {
 
 
 
+let locationInfoSwiper;
+let locationSwiper;
 
 
-let locationInfoSwiper = new Swiper(".location-info__slid", {
+locationInfoSwiper = new Swiper(".location-info__slid", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
     speed: 500,
+    loopedSlides: 3,
+    breakpoints: {
+        '991': {
+            loopedSlides: 1,
+        },
+        '760': {
+            loopedSlides: 1,
+        },
+        '420': {
+            loopedSlides: 1,
+        },
+        '300': {
+            loopedSlides: 1,
+        },
+    },
 });
 
-let locationSwiper = new Swiper(".location__slider", {
+locationSwiper = new Swiper(".location__slider", {
     slidesPerView: 4,
     spaceBetween: 50,
     loop: true,
@@ -647,12 +663,21 @@ let locationSwiper = new Swiper(".location__slider", {
             spaceBetween: 5,
         },
     },
-    thumbs: {
-        swiper: locationInfoSwiper,
-    },
 });
 
-
+Promise.all([locationSwiper.initialized, locationInfoSwiper.initialized]).then(() => {
+    locationInfoSwiper.on('slideChange', function () {
+      if (locationSwiper.activeIndex !== this.activeIndex) {
+        locationSwiper.slideTo(this.activeIndex);
+      }
+    });
+  
+    locationSwiper.on('slideChange', function () {
+      if (locationInfoSwiper.activeIndex !== this.activeIndex) {
+        locationInfoSwiper.slideTo(this.activeIndex);
+      }
+    });
+  });
 
 
 let partnersSwiper = new Swiper(".dev-partners__slider", {
@@ -834,15 +859,15 @@ pfree.on('mouseenter', function(e) {
         y = mainPlan.outerHeight() - plansHeight - apartQueue[0].offsetHeight - 20
     }
 
-    plansInfo.css({'top': y, 'left': x, 'display': 'block'});
+    plansInfo.css({'top': y, 'left': x});
+    plansInfo.addClass('active')
 });
 
 pfree.on('mouseleave',function(e){
     if (activePlansDataset !== e.currentTarget.dataset || !e.currentTarget){
         var plansInfo = $('.plans-free');
-        plansInfo.css({'display': 'none'});
         pfree.each(function (){
-            plansInfo.hide();
+            plansInfo.removeClass('active')
             $(this).css({'opacity': 0});
         })
     }
@@ -855,9 +880,9 @@ scrollApartment.on('mousemove', function(e) {
         targetElement.hasClass('total-plan')
     ) {
         var plansInfo = $('.plans-free');
-        plansInfo.css({'display': 'none'});
         pfree.each(function (){
-            plansInfo.hide();
+            // plansInfo.hide();
+            plansInfo.removeClass('active')
             $(this).css({'opacity': 0});
         })
     }

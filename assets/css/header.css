@@ -352,7 +352,8 @@ header{
     justify-content: center;
     border: 1px solid rgba(230, 235, 242, 1);
 }
-.header__apartment .image:hover{
+.header__apartment .apart__erp:hover{
+    transition: 0.3s;
     background: #001f4b;
 }
 

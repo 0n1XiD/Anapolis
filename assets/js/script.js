@@ -65,10 +65,12 @@ $('.open_modal').on('click', function () {
     }
     modal.removeClass('out');
     modal.fadeIn();
+    document.documentElement.classList.add('modal-open');
 });
 
 $('.close').on('click', function () {
     var prt = $(this).parents('.modal');
+    document.documentElement.classList.remove('modal-open');
     prt.addClass('out')
     setTimeout(function () {
         prt.fadeOut();
@@ -126,6 +128,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".animate__style").addClass("in-viewport");
         $('.contact__main').addClass("contact__act");
+        $('.developer__main').addClass('developer__act');
         $('.news-page').addClass("news__act");
         $('.news-single').addClass("news-single__act");
         $('.maintained__main').addClass("maintained__acts");
@@ -428,7 +431,7 @@ $(document).ready(function () {
         let prt_childrens = $(prt).children();
         let prt_child_li = $(prt_childrens).children();
         let first_child = $(prt_child_li)[0]
-        if (!$(first_child).hasClass(active_class)) {
+        if (!$(first_child).hasClass(active_class) && (active_class != 'active-moved')) {
             !$(first_child).addClass(active_class)
         }
     }
@@ -473,7 +476,7 @@ $(document).ready(function () {
     changeCaseBlock(this, 'choose-moved__href', 'choose-moved__info', 'active-moved', 'click-moved');
     $('.click-moved').on('click', function () {
         changeActiveClassWithClick(this, 'choose-moved__href', 'active-moved')
-        changeCaseBlock(this, 'choose-moved__href', 'choose-moved__info', 'active-moved', 'click-moved');
+        changeCaseBlock(this, 'choose-moved__href', 'choose-moved__info','active-moved', 'click-moved');
     })
 
 
@@ -543,24 +546,4 @@ $(document).ready(function() {
         
         $('.design__slider.' + catalogValue).show();
     });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const getCatElements = document.querySelectorAll('.location__boxis .get-cat');
-    if (getCatElements.length > 0) {
-        getCatElements.forEach(function(element) {
-            element.addEventListener('touchstart', function(event) {
-                event.stopPropagation();
-            });
-            element.addEventListener('touchend', function(event) {
-                event.stopPropagation();
-            });
-            element.addEventListener('touchmove', function(event) {
-                event.stopPropagation();
-            });
-        });
-    } else {
-        console.error('Элементы с классом .get-cat не найдены');
-    }
 });

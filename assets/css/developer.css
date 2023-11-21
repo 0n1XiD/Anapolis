@@ -191,7 +191,7 @@
 }
 @media (max-width: 1199px){
     .developer__main {
-        padding-top: 90px;
+        padding-top: 200px;
     }
     .developer__block p {
         font-size: 18px;
@@ -332,7 +332,7 @@
         margin-top: 80px;
     }
     .developer__main {
-        padding-top: 60px;
+        padding-top: 200px;
     }
     .dev-partners__box span {
         margin-top: 12px;
