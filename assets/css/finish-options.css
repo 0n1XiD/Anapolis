@@ -1,0 +1,231 @@
+.finish-opt .design__item{
+    margin-top: 100px;
+}
+
+.design__sliderTwo ,.design__sliderThree {
+    margin-left: -367px;
+    max-width: 868px;
+    width: 100%;
+    margin-right: -80px;
+    border-radius: 50%;
+}
+.finish-opt .design__item:nth-child(even) .design__sliderTwo{
+    margin-left: -80px;
+    margin-right: -367px;
+}
+.finish-opt .design__item:nth-child(even) .design__cnt {
+    margin-left: auto;
+}
+.finish-opt .design__item:nth-child(even) .design__option {
+    flex-direction: row-reverse;
+}
+.finish-opt .design__left {
+    max-width: 445px;
+    margin-top: 105px;
+}
+.finish-opt .design__cnt {
+    margin-top: -140px;
+    max-width: 450px;
+}
+
+
+.finish-opt .design__slider {
+    transform: unset;
+}
+
+.acquisitions__cnt {
+    padding-top: 45px;
+    margin-bottom: 200px;
+    transition: 1.5s;
+    transform: translateX(-30%);
+    opacity: 0;
+}
+.acquisitions__acts .acquisitions__cnt{
+    transform: translateX(0);
+    opacity: 1;
+}
+.acquisitions__cnt>p{
+    max-width: 676px;
+    width: 100%;
+}
+.acquisitions__flex{
+    margin-top: 105px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.acquisitions__box{
+    padding: 55px 35px 42px 57px;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 400px;
+    background: #ffffff;
+}
+.acquisitions__box h2{
+    font-size: 80px;
+    line-height: 52px;
+    color: rgba(16, 47, 92, 1);
+}
+.acquisitions__box p{
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(16, 47, 92, 1);
+
+}
+.acquisitions__page h1{
+    max-width: 772px;
+    width: 100%;
+    padding-top: 50px;
+}
+.acquisitions__main .purchase__info h2{
+    color: #ffffff;
+}
+.acquisitions__main{
+    padding-bottom: 440px;
+}
+.calculator__acquis{
+    padding: 120px 0 220px;
+}
+.acuis__secs .investments__block{
+    margin-top: -409px;
+    z-index: 1;
+}
+@media (max-width: 1599px){
+    .finish-opt .design__cnt {
+        margin-top: -50px;
+    }
+    .design__sliderTwo, .design__sliderThree{
+        margin-left: -384px;
+        max-width: 768px;
+        margin-right: 0;
+    }
+    .finish-opt .design__item:nth-child(even) .design__sliderTwo{
+        margin-left: 0;
+        margin-right: -367px;
+    }
+}
+@media (max-width: 1399px){
+    .design__sliderTwo, .design__sliderThree {
+        margin-left: -218px;
+        max-width: 678px;
+    }
+    .finish-opt .design__item:nth-child(even) .design__sliderTwo{
+        margin-left: 0;
+        margin-right: -218px;
+    }
+    .acquisitions__box {
+        padding: 40px 24px 30px 21px;
+        min-height: 374px;
+    }
+}
+@media (max-width: 1199px){
+    .finish-opt .design__left {
+        max-width: 375px;
+        margin-top: 60px;
+    }
+    .finish-opt .design__slider {
+        transform: unset;
+        margin-left: -160px;
+        max-width: 580px;
+    }
+    .finish-opt .design__cnt {
+        margin-top: 10px;
+    }
+    .design__sliderTwo, .design__sliderThree {
+        margin-left: -160px;
+        max-width: 580px;
+    }
+    .finish-opt .design__item:nth-child(even) .design__sliderTwo {
+        margin-left: 0;
+        margin-right: -160px;
+    }
+    .acquisitions__cnt {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media (max-width: 991px){
+
+    .acquisitions__box h2 {
+        font-size: 60px;
+        line-height: 65px;
+        color: rgba(16, 47, 92, 1);
+    }
+    .acquisitions__box h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .acquisitions__box {
+        padding: 30px 20px;
+        min-height: 311px;
+    }
+    .acquisitions__box p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .acquisitions__cnt {
+        padding-top: 45px;
+        margin-bottom: 100px;
+    }
+    .acuis__secs .investments__block {
+        margin-bottom: 0;
+        z-index: 1;
+    }
+    .calculator__acquis {
+        padding: 100px 0 210px;
+    }
+    .acquisitions__flex {
+        margin-top: 60px;
+        flex-direction: column;
+    }
+    .acquisitions__box {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+        max-width: 500px;
+        width: 100%;
+    }
+    .finish-opt .design__left {
+        max-width: 875px;
+        margin-top: 10px;
+    }
+    .finish-opt .design__slider {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    .finish-opt .design__item:nth-child(even) .design__sliderTwo {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    .design__sliderTwo, .design__sliderThree {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    .finish-opt .design__item:nth-child(even) .design__option {
+        flex-direction: column;
+    }
+    .finish-opt .design__item .design__cnt {
+        margin: 20px auto 0;
+    }
+    .acuis__secs {
+        background: linear-gradient(213.75deg, #174A94 11.27%, #15386B 86.16%);
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .acuis__secs .container{
+        padding: 0;
+    }
+    .acquisitions__main {
+        padding-bottom: 120px;
+    }
+    .acuis__secs .investments__block {
+        margin-top: 0;
+    }
+    .acquisitions__main .swiper-button-prev:before, .acquisitions__main .swiper-button-next:before{
+        border-top: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+    }
+
+}

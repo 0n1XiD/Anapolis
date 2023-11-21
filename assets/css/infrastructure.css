@@ -1,0 +1,996 @@
+.global__head{
+    background: #ffffff;
+    height: 644px;
+    margin-top: -124px;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.head-tit{
+    margin-top: 140px;
+}
+.anapolis__main{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.anapolis__main img{
+    width: 100%;
+}
+.anapolis__info{
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+    padding: 55px;
+    background: linear-gradient(213.75deg, #174A94 11.27%, #15386B 86.16%);
+
+}
+.anapolis__info:after{
+    content: url("../img/lin473.svg");
+    position: absolute;
+    right: 0;
+    top: 68px;
+}
+.anapolis__info p{
+    margin-top: 62px;
+}
+
+.anapolis__info p + p {
+    margin-top: 20px;
+}
+
+.product-apart{
+    padding-top: 215px;
+}
+.product-apart:before, .product-apart:after{
+    content: "";
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.product-apart:before{
+    top: 160px;
+    left: 0;
+    background-image: url("../img/tree1.svg");
+    max-width: 519px;
+    height: 1007px;
+}
+.product-apart:after{
+    right: 0;
+    top: 0;
+    background-image: url("../img/tree2.svg");
+    max-width: 708px;
+    height: 991px;
+}
+.product-apart__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    grid-gap: 20px;
+
+}
+.product-apart__box{
+    max-width: 349px;
+    width: 100%;
+    margin-bottom: 40px;
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateX(-30%);
+}
+.product__act .product-apart__box{
+    opacity: 1;
+    transform: translateX(0);
+}
+.product-apart__photo{
+    display: flex;
+    width: 100%;
+    height: 349px;
+}
+.product-apart__photo img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
+.product-apart__box span{
+    max-width: 300px;
+    width: 100%;
+    margin: 15px auto 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+    color: rgba(250, 250, 250, 1);
+    display: block;
+}
+.product-apart__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-apart__btn .btn-liner{
+    margin-right: 0;
+    max-width: 110px;
+}
+.product-apart__btn .anim-liner{
+    margin: 0;
+}
+.apart-viewing span{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+}
+.apart-viewing p{
+    opacity: 0.60;
+    margin: 18px auto 0;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.territory__pic{
+    display: flex;
+    width: 100%;
+}
+
+.territory__info{
+    margin-top: 56px;
+}
+.territory__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.territory__flex h2{
+    max-width: 485px;
+    width: 100%;
+}
+.territory__text{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.territory__text p{
+    margin-top: 35px;
+    max-width: 558px;
+    width: 100%;
+}
+
+.territory__flex .location__arrows {
+    margin-top: 0;
+    max-width: 305px;
+    width: 100%;
+    bottom: 0;
+}
+.swimming__flex{
+    display: flex;
+    width: 100%;
+}
+.swimming__info{
+    background: rgba(255, 255, 255, 1);
+    max-width: 35%;
+    width: 100%;
+    padding: 67px 60px 90px;
+
+}
+.swimming__info h1, .swimming__info h2, .swimming__info h3{
+    color: rgba(16, 47, 92, 1);
+}
+.swimming__flex{
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateX(-20%);
+}
+.swimming__act .swimming__flex{
+    transform: translateX(0);
+    opacity: 1;
+}
+.swimming__info>p{
+    margin-top: 40px;
+    color: rgba(16, 47, 92, 1);
+    font-weight: 400;
+}
+.swimming__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 462px;
+    width: 100%;
+}
+.swimming__just:nth-child(1){
+    max-width: 100%;
+    flex-direction: row;
+}
+.swimming__just:nth-child(1) p{
+    max-width: 240px;
+    margin-left: 40px;
+}
+.swimming__just{
+    max-width: 206px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 67px;
+}
+.swimming__just img{
+    max-width: 180px;
+    width: 100%;
+    border-radius: 50%;
+}
+.swimming__just p{
+    margin-top: 20px;
+    max-width: 206px;
+    width: 100%;
+    color: rgba(16, 47, 92, 1);
+    font-weight: 400;
+
+}
+.swimming__just:nth-child(3) p{
+    max-width: 180px;
+}
+.swimming__photo{
+    display: flex;
+    max-width: 65%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.swimming__photo img{
+    width: 100%;
+    object-fit: cover;
+}
+.meters-sea__cnt{
+    overflow: hidden;
+    max-width: 2080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.meters-sea__slider {
+    padding-top: 85px;
+    width: 2820px;
+    transform: translateX(-335px);
+}
+.meters-sea__box{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+}
+.meters-sea__box img{
+    width: 100%;
+}
+.meters-sea__info{
+    position: absolute;
+    top: -82px;
+    right: -82px;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: linear-gradient(213.75deg, #174A94 11.27%, #15386B 86.16%);
+    padding: 37px 37px 40px;
+}
+.meters__arrows{
+    display: none;
+}
+
+.landscaping__main{
+    padding-top: 180px;
+
+}
+
+.landscaping__title{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.landscaping__title h2{
+    max-width: 790px;
+    width: 100%;
+}
+.landscaping__pdf{
+    max-width: 217px;
+    width: 100%;
+    height: 217px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(213.75deg, #174A94 11.27%, #15386B 86.16%);
+    padding: 20px 40px;
+    transition: 0.5s;
+}
+.landscaping__pdf span{
+    display: block;
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+.landscaping__pdf img{
+    transition: 0.5s;
+}
+.landscaping__pdf:hover img{
+    transform: scale(1.2);
+}
+.landscaping__flex{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.landscaping__text{
+    max-width: 500px;
+    width: 100%;
+}
+
+.landscaping__text p + p{
+    margin-top: 30px;
+}
+.landscaping__picture{
+    display: flex;
+    width: 100%;
+    margin-top: 105px;
+    justify-content: center;
+}
+.landscaping__picture img{
+    width: 100%;
+}
+.scape__main{
+    margin-top: -85px;
+    width: 100%;
+    padding-bottom: 110px;
+}
+.scape__block{
+    margin-top: 134px;
+}
+.scape__cnt h1{
+    font-family: 'Spectral';
+    font-size: 200px;
+    font-weight: 200;
+    line-height: 155px;
+    text-align: left;
+    color: #ffffff;
+}
+.scape__cnt p{
+    max-width: 458px;
+    width: 100%;
+    margin: 60px 0 0 auto;
+}
+
+.scape__flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.scape__info{
+    max-width: 445px;
+    width: 100%;
+}
+.scape__info p{
+    margin-top: 58px;
+    max-width: 417px;
+    width: 100%;
+}
+.scape__info p + p{
+    margin-top: 30px;
+}
+
+
+.scape__photo{
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+}
+.scape__photo img{
+    width: 100%;
+    object-fit: cover;
+}
+.scape__arrows{
+    max-width: 280px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-top: -110px;
+    margin-left: 25px;
+    z-index: 12;
+}
+.scape__arrows .scape-pag{
+    max-width: 165px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+.scape-swiper-prev, .scape-swiper-next{
+    top: 0;
+    margin: 0;
+    max-width: 110px;
+    width: 100%;
+    height: 110px;
+}
+.scape-swiper-prev{
+    left: 0;
+    display: none;
+}
+.scape-swiper-next{
+    left: 0;
+    right: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: 1.1s;
+
+}
+
+.scape-swiper-next:before{
+    content: url(../img/arrow-liner.svg);
+    position: absolute;
+    transform: rotate(0);
+    left: -30px;
+    border: unset;
+    width: auto;
+    height: auto;
+    transition: 1.1s;
+
+}
+.scape-swiper-next:hover:before{
+    border: unset;
+}
+.scape-swiper-next:hover:before{
+    animation: scape-swip 2s forwards alternate;
+    transition: 1.1s;
+}
+@keyframes scape-swip {
+    0% {
+        transform: translateX(0em);
+    }
+    50% {
+        transform: translateX(-1.1em);
+    }
+    100% {
+        transform: translateX(0em);
+    }
+}
+
+.construction__item{
+    border: 2px solid #15386B;
+    padding: 40px 50px 0;
+    margin-top: 106px;
+    margin-bottom: 65px;
+}
+.construction__flex{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.construction__flex h2{
+    max-width: 660px;
+    width: 100%;
+}
+.construction__flex img{
+    max-width: 350px;
+    width: 100%;
+}
+.construction__item .btn-liner{
+    background: rgba(16, 47, 92, 1);
+    max-width: 520px;
+    margin-top: 20px;
+    margin-bottom: -54px;
+    padding: 0 10px;
+}
+.meters-sea__cnt .swiper-button-prev:before, .meters-sea__cnt .swiper-button-next:before{
+    display: none;
+}
+.territory__info .swiper-button-prev:before, .territory__info .swiper-button-next:before{
+    display: none;
+}
+
+@media (max-width: 1800px){
+    .meters-sea__slider {
+        width: 2603px;
+        transform: translateX(-386px);
+    }
+    .meters-sea__box {
+        max-width: 620px;
+    }
+}
+@media (max-width: 1699px){
+    .product-apart:before {
+        max-width: 410px;
+        height: 794px;
+    }
+    .product-apart:after {
+        max-width: 487px;
+        height: 674px;
+    }
+    .meters-sea__box {
+        max-width: 560px;
+    }
+    .meters-sea__info {
+        right: -42px;
+        max-width: 335px;
+        height: 335px;
+        padding: 22px 23px 29px;
+    }
+    .meters-sea__slider {
+        width: 2216px;
+        transform: translateX(-348px);
+
+    }
+    .scape__cnt h1 {
+        font-size: 160px;
+        line-height: 140px;
+    }
+    .scape__main {
+        margin-top: -76px;
+    }
+    .global__head {
+        height: 580px;
+    }
+    .news-single__cnt {
+        padding-top: 130px;
+    }
+}
+@media (max-width: 1599px){
+    .global__head {
+        height: 544px;
+        margin-top: -124px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+}
+@media (max-width: 1520px){
+    .swimming__wrap{
+        flex-direction: column;
+    }
+    .swimming__just {
+        max-width: 100%;
+        flex-direction: row;
+        margin-top: 50px;
+    }
+    .swimming__just p {
+        margin-left: 40px;
+    }
+}
+@media (max-width: 1399px){
+    .global__head {
+        height: 480px;
+        padding-top: 171px;
+        padding-bottom: 60px;
+    }
+    .product-apart__box {
+        max-width: 27.6%;
+    }
+    .product-apart__photo {
+        height: 310px;
+    }
+    .product-apart__wrap {
+        z-index: 1;
+        padding: 0 70px;
+    }
+    .territory__flex .location__arrows {
+        max-width: 358px;
+    }
+    .swimming__just:nth-child(1) {
+        max-width: 206px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .swimming__just {
+        max-width: 206px;
+        flex-direction: column;
+    }
+    .swimming__just p {
+        margin-left: 0;
+    }
+    .swimming__just:nth-child(1) p {
+        margin-left: 0;
+    }
+}
+@media (max-width: 1199px){
+    .global__head {
+        height: 400px;
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+    .anapolis__info {
+        max-width: 345px;
+        bottom: 40px;
+        right: 35px;
+        padding: 28px;
+    }
+    .product-apart__wrap {
+        padding: 0;
+    }
+    .product-apart__box {
+        max-width: 280px;
+    }
+    .product-apart__photo {
+        height: 280px;
+    }
+    .product-apart__box span {
+        max-width: 240px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .product-apart:after {
+        max-width: 363px;
+        height: 499px;
+    }
+    .territory__flex .location__arrows {
+        position: relative;
+    }
+    .territory__text p {
+        margin-top: 25px;
+        max-width: 430px;
+    }
+    .swimming__info {
+        padding: 25px 24px 56px;
+    }
+    .product-apart__box {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .swimming__photo img{
+        object-fit: cover;
+    }
+    .meters-sea__box {
+        max-width: 524px;
+    }
+    .swimming__flex {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .meters-sea__slider {
+        width: 1874px;
+        transform: translateX(-392px);
+    }
+    .landscaping__main {
+        padding-top: 100px;
+    }
+    .landscaping__flex {
+        margin-top: 60px;
+    }
+    .landscaping__text {
+        max-width: 450px;
+    }
+    .scape__cnt h1 {
+        font-size: 115px;
+        line-height: 120px;
+    }
+    .scape__main {
+        margin-top: -67px;
+    }
+    .product-apart__wrap {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 1024px){
+    .swimming__photo {
+        max-width: 100%;
+    }
+    .buildings__cnt .scape__arrows {
+        margin-top: 0;
+        margin-left: 0;
+        bottom: 0;
+    }
+    .territory__section .container{
+        padding: 0;
+    }
+    .territory__info{
+        padding: 0 20px;
+    }
+    .territory__pic {
+        width: 100%;
+        height: 500px;
+    }
+    .territory__pic img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .scape-swiper-prev, .scape-swiper-next {
+        max-width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 991px){
+    .anapolis__main img {
+        width: 100%;
+        height: 455px;
+        object-fit: cover;
+    }
+    .anapolis__info {
+        max-width: 310px;
+        bottom: 33px;
+        right: 24px;
+        padding: 26px 20px;
+    }
+    .product-apart:before{
+        display: none;
+    }
+    .product-apart:after{
+        display: none;
+    }
+    .apart-viewing span {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .location__arrows .swiper-pagination {
+        max-width: 150px;
+    }
+    .territory__flex .location__arrows {
+        max-width: 295px;
+    }
+    .territory__text {
+        flex-direction: column;
+    }
+    .territory__text p {
+        margin-top: 25px;
+        max-width: 830px;
+    }
+    .swimming__flex {
+        flex-direction: column-reverse;
+    }
+    .swimming__info {
+        max-width: 100%;
+        padding: 25px 24px 56px;
+    }
+    .swimming__wrap {
+        max-width: 562px;
+        width: 100%;
+        flex-direction: unset;
+    }
+    .meters-sea__slider {
+        width: 100%;
+        transform: unset;
+    }
+    .meters-sea__box {
+        max-width: 524px;
+        margin: 0 auto;
+    }
+    .meters__arrows {
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-between;
+        padding: 0 20px;
+        max-width: 350px;
+        width: 100%;
+        position: relative;
+    }
+    .meters__arrows .meters-swiper-next{
+        right: auto;
+    }
+    .meters-pag {
+        margin-top: 0;
+        position: relative;
+        bottom: 0;
+        max-width: 115px;
+        width: 100%;
+    }
+    .landscaping__flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .landscaping__text {
+        max-width: 750px;
+    }
+    .landscaping__title h2 {
+        max-width: 457px;
+        width: 100%;
+    }
+    .scape__flex {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .scape__arrows {
+        margin-top: 0;
+        margin-left: 25px;
+        bottom: 32%;
+    }
+    .scape__info {
+        max-width: 845px;
+        margin-top: 200px;
+    }
+    .scape__info p {
+        margin-top: 30px;
+        max-width: 817px;
+    }
+    .scape__arrows {
+        max-width: 280px;
+        align-items: flex-end;
+        margin-top: 0;
+        margin-left: 25px;
+        bottom: 390px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .construction__item {
+        padding: 34px 25px 0;
+        margin-top: 70px;
+        margin-bottom: 54px;
+    }
+    .scape__photo {
+        max-width: 100%;
+    }
+
+    .swimming__photo {
+        height: 570px;
+    }
+}
+@media (max-width: 760px){
+
+    .scape__cnt h1 {
+        font-size: 80px;
+        line-height: 88px;
+    }
+    .construction__flex {
+        width: 100%;
+        flex-direction: column;
+    }
+    .construction__flex img {
+        margin-top: 25px;
+    }
+
+    .anapolis__main {
+        flex-direction: column;
+    }
+    .anapolis__info {
+        max-width: 100%;
+        bottom: 0;
+        right: 0;
+        padding: 30px 20px;
+        position: relative;
+    }
+    .product-apart__wrap {
+        justify-content: center;
+    }
+    .product-apart {
+        padding-top: 85px;
+    }
+    .landscaping__title {
+        flex-direction: column;
+    }
+    .landscaping__pdf {
+        padding: 20px 30px;
+        margin: 25px auto 0;
+    }
+    .product-apart__box {
+        margin-bottom: 20px;
+    }
+    .scape__main {
+        margin-top: -49px;
+    }
+    .scape__cnt p {
+        max-width: 558px;
+        margin: 40px 0 0;
+    }
+    .construction__item {
+        margin-top: 10px;
+    }
+    .territory__flex {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+}
+@media (max-width: 630px){
+    .scape__arrows {
+        bottom: 444px;
+    }
+}
+@media (max-width: 570px){
+    .scape__cnt h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .landscaping__picture {
+        margin-top: 50px;
+        height: 430px;
+    }
+    .landscaping__picture img{
+        object-fit: cover;
+    }
+    .global__head {
+        height: auto;
+        padding-top: 162px;
+    }
+    .head-tit {
+        margin-top: 40px;
+    }
+    .swimming__just img {
+        max-width: 105px;
+    }
+    .swimming__just p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+    .swimming__just:nth-child(1) p {
+        max-width: 200px;
+        margin-left: 17px;
+    }
+    .swimming__just {
+        max-width: 138px;
+        margin-top: 45px;
+        align-items: flex-start;
+    }
+    .construction__item {
+        margin-bottom: 54px;
+    }
+    .meters-sea__info {
+        right: 21px;
+        max-width: 335px;
+        height: 335px;
+        padding: 22px 23px 29px;
+    }
+    .scape__arrows {
+        bottom: 441px;
+    }
+    .scape__block {
+        max-width: 350px;
+        width: 100%;
+    }
+    .scape-swiper-prev, .scape-swiper-next {
+        max-width: 90px;
+        height: 90px;
+    }
+    .swimming__wrap {
+        max-width: 450px;
+    }
+    .product-apart__btn .btn-liner {
+        max-width: 90px;
+    }
+
+}
+@media (max-width: 420px){
+    .swimming__just:nth-child(1) {
+        max-width: 300px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .swimming__just:nth-child(1) p {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 370px){
+    .scape__cnt h1 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+    .scape__arrows {
+        bottom: 496px;
+    }
+    .construction__item {
+        padding: 30px 20px 0;
+    }
+    .construction__item .btn-liner span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+   .construction__item  .anim-liner {
+        margin-right: 10px;
+    }
+}
