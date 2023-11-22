@@ -86,6 +86,12 @@
     -webkit-animation: zoomIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     animation: zoomIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
+
+.modal__video .video {
+    width: 75vw;
+    height: 75vh;
+}
+
 @-webkit-keyframes zoomIn {
     0% {
         -webkit-transform: scale(0);

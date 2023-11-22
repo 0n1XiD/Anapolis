@@ -585,19 +585,24 @@ locationInfoSwiper = new Swiper(".location-info__slid", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
-    freeMode: true,
+    loopedSlides: 4,
     watchSlidesProgress: true,
     speed: 500,
-    loopedSlides: 3,
     breakpoints: {
+        '1499': {
+            loopedSlides: 4,
+        },
+        '1199': {
+            loopedSlides: 4,
+        },
         '991': {
-            loopedSlides: 1,
+            loopedSlides: 3,
         },
         '760': {
-            loopedSlides: 1,
+            loopedSlides: 3,
         },
         '420': {
-            loopedSlides: 1,
+            loopedSlides: 3,
         },
         '300': {
             loopedSlides: 1,
@@ -664,21 +669,35 @@ locationSwiper = new Swiper(".location__slider", {
         },
     },
 });
+locationInfoSwiper.on("slideChange", function () {
+    var activeRealIndex = this.realIndex;
 
-Promise.all([locationSwiper.initialized, locationInfoSwiper.initialized]).then(() => {
-    locationInfoSwiper.on('slideChange', function () {
-      if (locationSwiper.activeIndex !== this.activeIndex) {
-        locationSwiper.slideTo(this.activeIndex);
-      }
-    });
-  
-    locationSwiper.on('slideChange', function () {
-      if (locationInfoSwiper.activeIndex !== this.activeIndex) {
-        locationInfoSwiper.slideTo(this.activeIndex);
-      }
-    });
-  });
+    var correspondingIndex = activeRealIndex;
+    if (correspondingIndex >= locationSwiper.slides.length) {
+        correspondingIndex = locationSwiper.slides.length - 1;
+    } else if (correspondingIndex < 0) {
+        correspondingIndex = 0;
+    }
 
+    if (!locationSwiper.animating) {
+        locationSwiper.slideToLoop(correspondingIndex);
+    }
+});
+
+locationSwiper.on("slideChange", function () {
+    var activeRealIndex = this.realIndex;
+
+    var correspondingIndex = activeRealIndex;
+    if (correspondingIndex >= locationInfoSwiper.slides.length) {
+        correspondingIndex = locationInfoSwiper.slides.length - 1;
+    } else if (correspondingIndex < 0) {
+        correspondingIndex = 0;
+    }
+
+    if (!locationInfoSwiper.animating) {
+        locationInfoSwiper.slideToLoop(correspondingIndex);
+    }
+});
 
 let partnersSwiper = new Swiper(".dev-partners__slider", {
     slidesPerView: 6,

@@ -268,6 +268,11 @@
         object-fit: cover;
         height: 549px;
     }
+    .video__icon {
+        transition: 0.5s;
+        width: 46px;
+        height: auto !important;
+    }
 }
 @media (max-width: 1024px){
     body .newsHasClass .news-page__block {

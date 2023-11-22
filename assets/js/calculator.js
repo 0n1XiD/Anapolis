@@ -11,7 +11,7 @@ let dateRange = document.getElementsByClassName('date-range')[0]
 let dateRangeValue = document.getElementsByClassName('date-range-value')[0]
 let monthlyPayment = document.getElementsByClassName('monthly-payment')[0]
 let percents = document.getElementsByClassName('percent__number')
-
+let bet = document.getElementsByClassName('calculator__href')
 
 
 
@@ -40,8 +40,9 @@ dateRange.addEventListener('input', function () {
 for (let i = 0; i < percents.length; i++) {
     percents[i].addEventListener('click', function () {
         let dataPercent = percents[i].dataset.percent
+        console.log(range.value)
         console.log(dataPercent);
-        firstPayPrice.innerText = +range.value * +dataPercent / 100
+        firstPayPrice.innerText = numberWithSpaces(+range.value * +dataPercent / 100)
         getInput.value = +range.value * +dataPercent / 100
         updateMainValue()
         mounthPay()
@@ -60,8 +61,19 @@ function numberWithSpaces(x) {
 }
 
 function updateMainValue() {
-    mainValue = +range.value - +getInput.value
-    addNumber.innerText = numberWithSpaces(mainValue) + ' ₽'
+    let act = document.getElementsByClassName('calculator-link__act')[0]
+    let perbet
+    if (act.innerHTML == 'Базовая программа') {
+        perbet = 0.134
+    }
+    else if (act.innerHTML == 'Господдержка') {
+        perbet = 0.08
+    }
+    else {
+        perbet = 0.1
+    }
+    mainValue = +(+range.value - +getInput.value) + +((+range.value - +getInput.value) * perbet)
+    addNumber.innerText = numberWithSpaces(mainValue.toFixed(2)) + ' ₽'
 }
 
 function mounthPay() {
@@ -94,6 +106,8 @@ $('.state-support-js').on('click', function () {
 $('.calculator__href').on('click', function () {
     $('.calculator__href').removeClass('calculator-link__act');
     $(this).addClass('calculator-link__act');
+    updateMainValue()
+    mounthPay()
 });
 
 $('.family-mortgage-js').on('click', function () {

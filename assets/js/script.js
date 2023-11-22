@@ -7,9 +7,8 @@ jQuery(window).scroll(function(){
         jQuery('.scrollup').fadeOut('slow');
     }
 });
-jQuery('.scrollup').click(function(){
-    jQuery("html, body").animate({ scrollTop: 0 }, 1500);
-    return false;
+$('.scrollup').click(function(){
+    $("html").scrollTop(0);
 });
 
 
@@ -75,6 +74,9 @@ $('.close').on('click', function () {
     setTimeout(function () {
         prt.fadeOut();
     }, 100);
+    link = prt.find('.video').attr('src')
+    prt.find('.video').attr('src', '');
+    prt.find('.video').attr('src', link);
 });
 $(window).on('click', function (event) {
     $('.modal').each(function () {
@@ -88,6 +90,10 @@ $(window).on('click', function (event) {
                 $(new_mod).fadeOut()
 
             }, 100)
+            link = prt.find('.video').attr('src')
+            prt.find('.video').attr('src', '');
+            prt.find('.video').attr('src', link);
+            document.documentElement.classList.remove('modal-open');
         }
         if (event.target === this) {
             setTimeout(function () {
@@ -95,7 +101,10 @@ $(window).on('click', function (event) {
                 $(new_mod).fadeOut()
 
             }, 100)
-
+            link = prt.find('.video').attr('src')
+            prt.find('.video').attr('src', '');
+            prt.find('.video').attr('src', link);
+            document.documentElement.classList.remove('modal-open');
         }
     })
 });

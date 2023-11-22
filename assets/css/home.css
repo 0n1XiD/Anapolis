@@ -1430,9 +1430,11 @@ input:checked + .slider:before {
     transform: translateX(-10vw);
     transition: all 1.3s ease;
     opacity: 0;
+    pointer-events: none;
 }
 
 .plans-free.active {
+    pointer-events: auto;
     opacity: 1;
     transition: all 0.3s ease;
 }
@@ -4988,6 +4990,10 @@ input:checked + .slider:before {
         width: 46px;
     }
 
+    .video__background{
+        height: 226px !important;
+        object-fit: none;
+    }
     .choose-apart__sec {
         margin: 33px auto 0;
         background: #fff;
