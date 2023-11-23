@@ -2635,7 +2635,7 @@ input:checked + .slider:before {
 
 .jq-selectbox__dropdown ul {
     overflow: auto;
-    max-height: 222px;
+    max-height: 231px;
 }
 
 .jq-selectbox__dropdown ul::-webkit-scrollbar {
