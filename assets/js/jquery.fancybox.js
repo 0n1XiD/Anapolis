@@ -129,12 +129,8 @@
 
     // For HTML5 video only
     video: {
-      tpl: '<video class="fancybox-video" controls controlsList="nodownload" poster="{{poster}}">' +
-        '<source src="{{src}}" type="{{format}}" />' +
-        'Sorry, your browser doesn\'t support embedded videos, <a href="{{src}}">download</a> and watch with your favorite video player!' +
-        "</video>",
+      tpl: '<iframe class="video" src="https://www.youtube.com/embed/MwtAFoTbfZk?si=eHtsWX4M4f-nOuOc" title="YouTube video player" frameborder="0"></iframe>',
       format: "", // custom video format
-      autoStart: true
     },
 
     // Default content type if cannot be detected automatically

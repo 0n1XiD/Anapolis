@@ -673,11 +673,6 @@ locationInfoSwiper.on("slideChange", function () {
     var activeRealIndex = this.realIndex;
 
     var correspondingIndex = activeRealIndex;
-    if (correspondingIndex >= locationSwiper.slides.length) {
-        correspondingIndex = locationSwiper.slides.length - 1;
-    } else if (correspondingIndex < 0) {
-        correspondingIndex = 0;
-    }
 
     if (!locationSwiper.animating) {
         locationSwiper.slideToLoop(correspondingIndex);
@@ -688,12 +683,6 @@ locationSwiper.on("slideChange", function () {
     var activeRealIndex = this.realIndex;
 
     var correspondingIndex = activeRealIndex;
-    if (correspondingIndex >= locationInfoSwiper.slides.length) {
-        correspondingIndex = locationInfoSwiper.slides.length - 1;
-    } else if (correspondingIndex < 0) {
-        correspondingIndex = 0;
-    }
-
     if (!locationInfoSwiper.animating) {
         locationInfoSwiper.slideToLoop(correspondingIndex);
     }

@@ -2619,6 +2619,7 @@ input:checked + .slider:before {
 }
 
 .select-bank .jq-selectbox__dropdown {
+    overflow: auto;
     width: 100%;
     margin: -2px 0 0;
     padding: 0 10px 35px 40px;
@@ -2631,6 +2632,21 @@ input:checked + .slider:before {
     transition: 0.3s;
     top: 60px !important;
 }
+
+.jq-selectbox__dropdown ul {
+    overflow: auto;
+    max-height: 222px;
+}
+
+.jq-selectbox__dropdown ul::-webkit-scrollbar {
+    width: 6px;
+    background: none;
+}
+
+.jq-selectbox__dropdown ul::-webkit-scrollbar-thumb {
+    background: #8F95A1;
+    border-radius: 38px;
+  }
 
 .select-bank .jq-selectbox li:first-child {
     margin-top: 18px;
